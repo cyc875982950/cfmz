@@ -93,5 +93,7 @@ public class CmfzApplicationTests {
     public void insert1() {
         Integer integer = userMapper.selectByprovince(7);
         System.out.println(integer);
+        System.out.println("-------------------------");
+        System.out.println("吃饭");
     }
 }
