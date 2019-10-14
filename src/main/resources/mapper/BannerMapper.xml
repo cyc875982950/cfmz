@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.mapper.BannerMapper">
+    <select id="findAll" resultType="Banner">
+        select * from banner LIMIT #{start},#{rows}
+    </select>
+    <select id="count" resultType="Integer">
+        select count(id) from banner
+    </select>
+    <select id="queryAll" resultType="Banner">
+        select * from  banner
+    </select>
+    <insert id="add">
+        insert into banner(id,title,img,create_time,dese,status) values(#{id},#{title},#{img},#{create_time},#{dese},#{status})
+    </insert>
+    <update id="update">
+        update banner set img=#{img} where id=#{id}
+    </update>
+    <update id="updateAll">
+        update banner set status=#{status}
+        where id=#{id}
+    </update>
+    <delete id="delete">
+        delete from banner where id=#{id}
+    </delete>
+</mapper>
