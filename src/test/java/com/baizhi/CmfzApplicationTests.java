@@ -95,5 +95,6 @@ public class CmfzApplicationTests {
         System.out.println(integer);
         System.out.println("-------------------------");
         System.out.println("吃饭");
+         System.out.println("吃1");
     }
 }
